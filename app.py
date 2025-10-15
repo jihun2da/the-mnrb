@@ -13,7 +13,7 @@ import io
 
 # 페이지 설정
 st.set_page_config(
-    page_title="OUR Shop",
+    page_title="mnrb",
     page_icon="🛍️",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -27,8 +27,8 @@ DATA_DIR.mkdir(exist_ok=True)
 IMAGE_DIR = Path("image")
 
 # 관리자 계정 정보
-ADMIN_USERNAME = "our"
-ADMIN_PASSWORD = "our123"
+ADMIN_USERNAME = "mnrb"
+ADMIN_PASSWORD = "mnrb123"
 
 # CSS 스타일링
 st.markdown("""
@@ -244,7 +244,7 @@ def load_settings():
     return {
         "banner_slide_interval": 3,
         "banners": [],
-        "shop_name": "🌺 OAHU SHOP 🌺",
+        "shop_name": "mnrb shop",
         "shop_name_font_size": 48,
         "shop_name_color": "#333333",
         "notice": {
@@ -253,7 +253,7 @@ def load_settings():
             "enabled": True
         },
         "business_info": {
-            "company_name": "OAHU Shop",
+            "company_name": "mnrb",
             "ceo_name": "대표자명",
             "business_number": "123-45-67890",
             "address": "서울특별시 강남구",
@@ -300,7 +300,7 @@ def save_inquiry(inquiry_data):
 def load_google_sheet_data():
     try:
         sheet_id = "1Cnd19QAMyNEgvEdfXTA1QtW0VMiTRMCBFGmrzKWezNQ"
-        gid = "531747363"  # OUR 시트
+        gid = "1791138406"  # MNRB 시트
         url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/export?format=csv&gid={gid}"
         df = pd.read_csv(url)
         return df
