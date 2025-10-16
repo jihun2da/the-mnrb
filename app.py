@@ -571,8 +571,8 @@ def show_detail_page():
         product_price = "가격 문의"
     
     st.markdown(f"# {product_name}")
-    st.markdown(f"**색상/사이즈:** {product_info}")
-    st.markdown(f"**가격:** {product_price}")
+    st.markdown(f'<div style="font-size: 16px; margin: 10px 0;"><strong>색상/사이즈:</strong> {product_info}</div>', unsafe_allow_html=True)
+    st.markdown(f'<div style="font-size: 16px; margin: 10px 0;"><strong>가격:</strong> {product_price}</div>', unsafe_allow_html=True)
     st.markdown("---")
     
     # 이미지 갤러리
